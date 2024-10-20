@@ -1,5 +1,5 @@
 $(document).ready(function () {
-   $('.pay, .adress__edit, .user, .card,  .reg, .relogin, .adress, .login').css('display', 'none');
+   $('.pay, .adress__edit, .user, .card, .reg, .relogin, .adress, .login').css('display', 'none');
 
    var $button1 = $('.header__btn-login')
    var $button2 = $('.header__btn-reg');
@@ -8,6 +8,8 @@ $(document).ready(function () {
    var $button5 = $('.main__item,.right__sidebar-item');
    var $button6 = $('.user__item-adress');
    var $button7 = $('.adress__edit-btn, .adress__edit-name ,.right__sidebar-adress');
+   var $button8 = $('.header__btn-cart');
+
 
    //user
    $button1.click(function () {
@@ -99,8 +101,17 @@ $(document).ready(function () {
       $('.adress__edit').show();
 
    })
+   //cart
+   $button8.click(function () {
+      $('.right').show();
 
-   $(".left__sidebar-menu").on("click", function () {
+   })
+   $('.right__edit-btn-close').click(function () {
+      $('.right').hide();
+   })
+
+   //
+   $(".header__btn-cart").on("click", function () {
       $(".left__sidebar-item").toggle();
    });
 
@@ -125,5 +136,5 @@ $(document).ready(function () {
    //    $("#decrementButton").click(function () {
    //       count--;
    //       $("#counter1").text(count);
-});
 
+});
