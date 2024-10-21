@@ -101,40 +101,28 @@ $(document).ready(function () {
       $('.adress__edit').show();
 
    })
-   //cart
-   $button8.click(function () {
-      $('.right').show();
+   // //cart
+   // $button8.click(function () {
+   //    $('.right').show();
 
-   })
-   $('.right__edit-btn-close').click(function () {
-      $('.right').hide();
-   })
+   // })
+   // $('.right__edit-btn-close').click(function () {
+   //    $('.right').hide();
+   // })
 
    //
    $(".header__btn-cart").on("click", function () {
       $(".left__sidebar-item").toggle();
    });
 
-
-
-   // var originalImageSrc = $(".left__sidebar-img").attr("src");
-   // $(".left__sidebar-img").hover(function () {
-   //    // Заменяем изображение на другое
-   //    $(this).attr("src", "../images/icons/icon-arrow-up.svg");
-   // }, function () {
-   //    // При уходе устанавливаем обратно исходное изображение
-   //    $(this).attr("src", originalImageSrc);
-   // });
-
-
-   //    let count = 0;
-   //    $("#incrementButton").click(function () {
-   //       count++;
-   //       $("#counter1").text(count);
-   //    });
-
-   //    $("#decrementButton").click(function () {
-   //       count--;
-   //       $("#counter1").text(count);
-
+   $(".header__btn-cart").click(function () {
+      var currentImage = $("#button-image").attr("src");
+      if (currentImage === "../images/icons/icon-shopping-cart.svg") {
+         $('.right').show();
+         $("#button-image").attr("src", "../images/icons/NextArrow.svg");
+      } else {
+         $("#button-image").attr("src", "../images/icons/icon-shopping-cart.svg");
+         $('.right').hide();
+      }
+   });
 });
